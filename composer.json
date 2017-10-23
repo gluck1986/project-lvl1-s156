@@ -1,0 +1,24 @@
+{
+  "name": "gluck1986/brain-games",
+  "bin": [
+    "bin/brain-games"
+  ],
+  "description": "project-lvl1-s156",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kirill",
+      "email": "gluck1986@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Project\\": "src",
+      "Project\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": ">=7.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+echo "\033[0;35m" . 'Welcome' . "\033[0m" . ' to the ' . "\033[0;0;1m" . 'Brain' . "\033[0m" . ' Games!' . PHP_EOL;
+
