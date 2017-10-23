@@ -14,9 +14,13 @@
   ],
   "autoload": {
     "psr-4": {
-      "Project\\": "src",
-      "Project\\Tests\\": "tests"
-    }
+      "BrainGames\\": "src",
+      "BrainGames\\Tests\\": "tests"
+    },
+    "files": [
+      "src\\Cli.php"
+    ]
+
   },
   "require": {
     "php": ">=7.0.0",
