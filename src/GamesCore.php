@@ -37,7 +37,6 @@ function initGame(\Closure $scenario): void
 function runGame(\Closure $game, int $try): bool
 {
     if ($try < 1) {
-
         return true;
     }
     list($question, $expected) = $game();
