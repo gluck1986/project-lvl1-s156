@@ -1,8 +1,10 @@
 <?php
+
 namespace BrainGames\GamesCore;
 
 use function BrainGames\CliIOFunctions\ask;
 use function BrainGames\CliIOFunctions\askName;
+use function BrainGames\CliIOFunctions\bold;
 use function BrainGames\CliIOFunctions\say;
 use function BrainGames\CliIOFunctions\sayCorrect;
 use function BrainGames\CliIOFunctions\sayHello;
@@ -40,7 +42,7 @@ function runGame(\Closure $game, int $try): bool
         return true;
     }
     list($question, $expected) = $game();
-    say('Question: ' . $question);
+    say('Question: ' . bold($question));
     $actual = (string)ask('Your answer');
     if ($actual !== $expected) {
         sayNotCorrect($actual, $expected);

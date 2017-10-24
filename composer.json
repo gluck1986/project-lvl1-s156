@@ -3,7 +3,8 @@
   "bin": [
     "bin/brain-games",
     "bin/brain-even",
-    "bin/brain-calc"
+    "bin/brain-calc",
+    "bin/brain-gcd"
   ],
   "description": "project-lvl1-s156",
   "type": "project",
@@ -29,7 +30,8 @@
       "src\\Scenario.php",
       "src\\GamesCore.php",
       "src\\gameScenarios\\EvenScenario.php",
-      "src\\gameScenarios\\CalcScenario.php"
+      "src\\gameScenarios\\CalcScenario.php",
+      "src\\gameScenarios\\GcdScenario.php"
     ]
   },
   "require": {

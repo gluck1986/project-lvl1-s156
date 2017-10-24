@@ -1,4 +1,5 @@
 <?php
+
 namespace BrainGames\Scenario;
 
 const HEAD = 'head';
