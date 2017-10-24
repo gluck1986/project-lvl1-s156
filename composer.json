@@ -24,10 +24,12 @@
     },
     "files": [
       "src\\Cli.php",
-      "src\\Functions.php",
-      "src\\Games.php"
+      "src\\CliIOFunctions.php",
+      "src\\Scenario.php",
+      "src\\GamesCore.php",
+      "src\\gameScenarios\\EvenScenario.php",
+      "src\\gameScenarios\\CalcScenario.php"
     ]
-
   },
   "require": {
     "php": ">=7.1.0",

@@ -2,19 +2,24 @@
 
 namespace BrainGames\Cli;
 
-use const BrainGames\Games\BRAIN_EVEN_ID;
-use function BrainGames\Games\brainEven;
+use const BrainGames\gameScenarios\CalcScenario\ID as CALC_ID;
+use const BrainGames\gameScenarios\EvenScenario\ID as EVEN_ID;
+use function BrainGames\gameScenarios\CalcScenario\getCalcScenario;
+use function BrainGames\gameScenarios\EvenScenario\getEvenScenario;
+use function BrainGames\GamesCore\initGame;
 
 function run($game_id = null)
 {
-    if ($game_id === BRAIN_EVEN_ID) {
-        brainEven();
+    if ($game_id === EVEN_ID) {
+        initGame(getEvenScenario());
+    } else if ($game_id === CALC_ID) {
+        initGame(getCalcScenario());
     } else {
-        getDefault()();
+        initGame(getDefault());
     }
 }
 
 function getDefault()
 {
-    return 'BrainGames\Games\brainEven';
+    return getEvenScenario();
 }
