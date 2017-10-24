@@ -1,7 +1,8 @@
 {
   "name": "gluck1986/brain-games",
   "bin": [
-    "bin/brain-games"
+    "bin/brain-games",
+    "bin/brain-even"
   ],
   "description": "project-lvl1-s156",
   "type": "project",
