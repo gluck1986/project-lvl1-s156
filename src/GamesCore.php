@@ -1,5 +1,4 @@
 <?php
-
 namespace BrainGames\GamesCore;
 
 use function BrainGames\CliIOFunctions\ask;

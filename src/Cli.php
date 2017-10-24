@@ -12,7 +12,7 @@ function run($game_id = null)
 {
     if ($game_id === EVEN_ID) {
         initGame(getEvenScenario());
-    } else if ($game_id === CALC_ID) {
+    } elseif ($game_id === CALC_ID) {
         initGame(getCalcScenario());
     } else {
         initGame(getDefault());

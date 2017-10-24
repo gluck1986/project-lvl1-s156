@@ -1,5 +1,4 @@
 <?php
-
 namespace BrainGames\Scenario;
 
 const HEAD = 'head';
@@ -10,7 +9,7 @@ function buildScenario(string $head, \Closure $action)
     return function ($signal) use ($head, $action) {
         if ($signal === HEAD) {
             return $head;
-        } else if ($signal === ACTION) {
+        } elseif ($signal === ACTION) {
             return $action;
         }
         throw new \Exception('Invalid signal:\'' . $signal . '\'');

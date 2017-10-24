@@ -5,7 +5,6 @@ namespace BrainGames\CliIOFunctions;
 use cli\Colors;
 use function cli\prompt;
 
-
 function say($text, $brs = 1): void
 {
     echo Colors::colorize($text, true);
@@ -73,7 +72,6 @@ function bold(string $text): string
 function br($colOfLines = 1): void
 {
     if ($colOfLines < 1) {
-
         return;
     }
     echo PHP_EOL;
