@@ -2,12 +2,19 @@
 
 namespace BrainGames\Cli;
 
-use function cli\prompt;
+use const BrainGames\Games\BRAIN_EVEN_ID;
+use function BrainGames\Games\brainEven;
 
-function run()
+function run($game_id = null)
 {
-    echo \cli\Colors::colorize('%mWelcome%n  to the %9Brain%n Games!', true);
-    echo PHP_EOL . PHP_EOL;
-    $name = prompt('May I have your name?');
-    echo \cli\Colors::colorize('Hello, %9' . $name . '%n!', true) . PHP_EOL;
+    if ($game_id === BRAIN_EVEN_ID) {
+        brainEven();
+    } else {
+        getDefault()();
+    }
+}
+
+function getDefault()
+{
+    return 'BrainGames\Games\brainEven';
 }

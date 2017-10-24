@@ -22,7 +22,9 @@
       "BrainGames\\Tests\\": "tests"
     },
     "files": [
-      "src\\Cli.php"
+      "src\\Cli.php",
+      "src\\Functions.php",
+      "src\\Games.php"
     ]
 
   },
