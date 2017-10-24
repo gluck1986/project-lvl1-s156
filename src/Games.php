@@ -2,7 +2,6 @@
 
 namespace BrainGames\Games;
 
-
 use cli\Colors;
 use function BrainGames\Functions\getName;
 use function BrainGames\Functions\hello;
