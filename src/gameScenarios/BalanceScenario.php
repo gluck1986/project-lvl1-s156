@@ -92,7 +92,7 @@ function arrayToInt(array $data): int
     return (int)implode('', $data);
 }
 
-function findIndexMaxValue(Array $arr, $minIndex = 0, $current = 0): int
+function findIndexMaxValue(array $arr, $minIndex = 0, $current = 0): int
 {
     if ($current >= count($arr)) {
         return $minIndex;
@@ -104,7 +104,7 @@ function findIndexMaxValue(Array $arr, $minIndex = 0, $current = 0): int
     }
 }
 
-function findIndexMinValue(Array $arr, $minIndex = 0, $current = 0): int
+function findIndexMinValue(array $arr, $minIndex = 0, $current = 0): int
 {
     if ($current >= count($arr)) {
         return $minIndex;

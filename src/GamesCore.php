@@ -50,5 +50,3 @@ function runGame(\Closure $game, int $try): bool
         return false;
     }
 }
-
-

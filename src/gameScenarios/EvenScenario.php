@@ -34,4 +34,3 @@ function getAction(): \Closure
         return [$question, $expected];
     };
 }
-
