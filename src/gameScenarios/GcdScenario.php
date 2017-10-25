@@ -8,7 +8,7 @@ use function BrainGames\Scenario\buildScenario;
 const ID = 'gcd';
 
 const MIN_NUM = 1;
-const MAX_NUM = 9;
+const MAX_NUM = 20;
 
 function getGcdScenario()
 {

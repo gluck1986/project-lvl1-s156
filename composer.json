@@ -4,7 +4,8 @@
     "bin/brain-games",
     "bin/brain-even",
     "bin/brain-calc",
-    "bin/brain-gcd"
+    "bin/brain-gcd",
+    "bin/brain-balance"
   ],
   "description": "project-lvl1-s156",
   "type": "project",
@@ -31,7 +32,8 @@
       "src\\GamesCore.php",
       "src\\gameScenarios\\EvenScenario.php",
       "src\\gameScenarios\\CalcScenario.php",
-      "src\\gameScenarios\\GcdScenario.php"
+      "src\\gameScenarios\\GcdScenario.php",
+      "src\\gameScenarios\\BalanceScenario.php"
     ]
   },
   "require": {
