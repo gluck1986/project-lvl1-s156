@@ -1,7 +1,7 @@
 install:
 	composer install
 test:
-	composer run-script phpunit tests
+	composer run-script phpunit
 run:
 	bin/brain-games
 lint:
