@@ -3,4 +3,4 @@
 <?php
 require_once __DIR__ . '/../src/bootstrap.php';
 
-\BrainGames\Cli\run('gcd');
+\BrainGames\Cli\run('balance');

@@ -13,7 +13,7 @@ const NO = 'no';
 const MIN_NUM = 1;
 const MAX_NUM = 99;
 
-function getEvenScenario()
+function getScenario()
 {
     return buildScenario(getHead(), getAction());
 }
@@ -34,3 +34,4 @@ function getAction(): \Closure
         return [$question, $expected];
     };
 }
+

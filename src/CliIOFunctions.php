@@ -11,9 +11,9 @@ function say($text, $brs = 1): void
     br($brs);
 }
 
-function ask($question): string
+function ask($question, $default = '0'): string
 {
-    return prompt($question);
+    return prompt($question, $default);
 }
 
 /**

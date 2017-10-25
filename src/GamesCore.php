@@ -15,11 +15,7 @@ use function BrainGames\CliIOFunctions\sayWin;
 use function BrainGames\Scenario\getGame;
 use function BrainGames\Scenario\getHead;
 
-const BRAIN_EVEN_ID = 1;
 const MAX_TRY = 3;
-
-const YES = 'yes';
-const NO = 'no';
 
 
 function initGame(\Closure $scenario): void
@@ -41,16 +37,18 @@ function runGame(\Closure $game, int $try): bool
     if ($try < 1) {
         return true;
     }
-    list($question, $expected) = $game();
+    list($question, $expected, $tester) = $game();
     say('Question: ' . bold($question));
     $actual = (string)ask('Your answer');
-    if ($actual !== $expected) {
-        sayNotCorrect($actual, $expected);
-
-        return false;
-    } else {
+    if ((!is_null($tester) && $tester($actual)) || $actual === $expected) {
         sayCorrect();
 
         return runGame($game, $try - 1);
+    } else {
+        sayNotCorrect($actual, $expected);
+
+        return false;
     }
 }
+
+

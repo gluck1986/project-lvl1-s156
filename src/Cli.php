@@ -2,22 +2,19 @@
 
 namespace BrainGames\Cli;
 
-use const BrainGames\gameScenarios\CalcScenario\ID as CALC_ID;
-use const BrainGames\gameScenarios\EvenScenario\ID as EVEN_ID;
-use const BrainGames\gameScenarios\GcdScenario\ID as GCD_ID;
-use function BrainGames\gameScenarios\CalcScenario\getCalcScenario;
-use function BrainGames\gameScenarios\EvenScenario\getEvenScenario;
-use function BrainGames\gameScenarios\GcdScenario\getGcdScenario;
+use function BrainGames\gameScenarios\EvenScenario\getScenario;
 use function BrainGames\GamesCore\initGame;
 
-function run($game_id = null)
+const NAME_SPACE_SCENARIOS = 'BrainGames\\gameScenarios\\';
+const NAME_SPACE_SCENARIO_POSTFIX = 'Scenario';
+const SCENARIO_INDEX_FUNCTION = 'getScenario';
+
+function run($game_name = null)
 {
-    if ($game_id === EVEN_ID) {
-        initGame(getEvenScenario());
-    } elseif ($game_id === CALC_ID) {
-        initGame(getCalcScenario());
-    } elseif ($game_id === GCD_ID) {
-        initGame(getGcdScenario());
+
+    $funcName = getFullNameFunctionScenario($game_name);
+    if (function_exists($funcName)) {
+        initGame($funcName());
     } else {
         initGame(getDefault());
     }
@@ -25,5 +22,25 @@ function run($game_id = null)
 
 function getDefault()
 {
-    return getEvenScenario();
+    return getScenario();
+}
+
+
+function getFullNameFunctionScenario($name)
+{
+    return NAME_SPACE_SCENARIOS .
+        upperFirstChar($name) .
+        NAME_SPACE_SCENARIO_POSTFIX .
+        '\\' .
+        SCENARIO_INDEX_FUNCTION;
+}
+
+function upperFirstChar(string $string): string
+{
+    if (mb_strlen($string) > 1) {
+        return mb_strtoupper(mb_substr($string, 0, 1)) .
+            mb_substr($string, 1, mb_strlen($string) - 1);
+    } else {
+        return mb_strtoupper($string);
+    }
 }

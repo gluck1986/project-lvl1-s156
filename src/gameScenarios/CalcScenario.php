@@ -4,15 +4,13 @@ namespace BrainGames\gameScenarios\CalcScenario;
 
 use function BrainGames\Scenario\buildScenario;
 
-const ID = 'calc';
-
 const MIN_NUM = 0;
 const MAX_NUM = 10;
 
 const KEY_OPERATION = 'operation';
 const KEY_OPERATION_NAME = 'name';
 
-function getCalcScenario()
+function getScenario()
 {
     return buildScenario(getHead(), getAction());
 }
@@ -38,6 +36,7 @@ TEXT;
         return [$question, $expected];
     };
 }
+
 
 function getOperations(): array
 {

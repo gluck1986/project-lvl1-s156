@@ -10,7 +10,7 @@ const ID = 'gcd';
 const MIN_NUM = 1;
 const MAX_NUM = 20;
 
-function getGcdScenario()
+function getScenario()
 {
     return buildScenario(getHead(), getAction());
 }
