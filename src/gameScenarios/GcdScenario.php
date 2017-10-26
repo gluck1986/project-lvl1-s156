@@ -2,7 +2,6 @@
 
 namespace BrainGames\gameScenarios\GcdScenario;
 
-use function BrainGames\CliIOFunctions\bold;
 use function BrainGames\Scenario\buildScenario;
 
 const ID = 'gcd';
@@ -26,7 +25,7 @@ function getAction(): \Closure
     return function () {
         $number1 = rand(MIN_NUM, MAX_NUM);
         $number2 = rand(MIN_NUM, MAX_NUM);
-        $question = bold($number1) . ' ' . bold($number2);
+        $question = $number1 . ' ' . $number2;
         $expected = (string)calcGCD($number1, $number2);
 
         return [$question, $expected];

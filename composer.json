@@ -33,7 +33,8 @@
       "src\\gameScenarios\\EvenScenario.php",
       "src\\gameScenarios\\CalcScenario.php",
       "src\\gameScenarios\\GcdScenario.php",
-      "src\\gameScenarios\\BalanceScenario.php"
+      "src\\gameScenarios\\BalanceScenario.php",
+      "src\\gameScenarios\\ProgressionScenario.php"
     ]
   },
   "require": {

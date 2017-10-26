@@ -2,7 +2,6 @@
 
 namespace BrainGames\gameScenarios\EvenScenario;
 
-use function BrainGames\CliIOFunctions\bold;
 use function BrainGames\Scenario\buildScenario;
 
 const ID = 'even';
@@ -28,7 +27,7 @@ function getAction(): \Closure
 
     return function () {
         $number = rand(MIN_NUM, MAX_NUM);
-        $question = bold($number);
+        $question = $number;
         $expected = $number % 2 === 0 ? YES : NO;
 
         return [$question, $expected];

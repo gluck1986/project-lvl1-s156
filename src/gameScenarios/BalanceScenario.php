@@ -2,7 +2,6 @@
 
 namespace BrainGames\gameScenarios\BalanceScenario;
 
-use function BrainGames\CliIOFunctions\bold;
 use function BrainGames\Scenario\buildScenario;
 
 const MIN_NUM = 10;
@@ -23,7 +22,7 @@ function getAction(): \Closure
 
     return function () {
         $number = rand(MIN_NUM, MAX_NUM);
-        $question = bold($number);
+        $question = $number;
         $expected = (string)balance($number);
 
         return [$question, $expected];

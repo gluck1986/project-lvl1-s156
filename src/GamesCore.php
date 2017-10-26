@@ -40,7 +40,7 @@ function runGame(\Closure $game, int $try): bool
     sayQuestion($question);
     $actual = (string)ask('Your answer');
     if ((!is_null($tester) && $tester($actual))
-        || (is_null($tester) && $actual === $expected)
+        || (is_null($tester) && (string)$actual === (string)$expected)
     ) {
         sayCorrect();
 
