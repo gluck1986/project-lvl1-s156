@@ -5,8 +5,8 @@ namespace BrainGames\gameScenarios\BalanceScenario;
 use function BrainGames\CliIOFunctions\bold;
 use function BrainGames\Scenario\buildScenario;
 
-const MIN_NUM = 20;
-const MAX_NUM = 40;
+const MIN_NUM = 10;
+const MAX_NUM = 99;
 
 function getScenario()
 {
@@ -25,46 +25,10 @@ function getAction(): \Closure
         $number = rand(MIN_NUM, MAX_NUM);
         $question = bold($number);
         $expected = (string)balance($number);
-        $tester = getTester($expected);
 
-        return [$question, $expected, $tester];
+        return [$question, $expected];
     };
 }
-
-function getTester(int $expected): \Closure
-{
-    return function (int $val) use ($expected): bool {
-        $userData = intToArray($val);
-        $expectedData = intToArray($expected);
-
-        return getTesterData($expectedData) === getTesterData($userData);
-    };
-}
-
-function getTesterData(array $provider): array
-{
-    $maxIndex = findIndexMaxValue($provider);
-    $minIndex = findIndexMinValue($provider);
-    $max = $provider[$maxIndex];
-    $min = $provider[$minIndex];
-    $countOfMax = countOf($provider, $max);
-    $countOfMin = countOf($provider, $min);
-
-    return [$max, $min, $countOfMax, $countOfMin];
-}
-
-function countOf(array $data, $needle): int
-{
-    return count(
-        array_filter(
-            $data,
-            function ($val) use ($needle) {
-                return $val === $needle;
-            }
-        )
-    );
-}
-
 
 function balance(int $number): int
 {
@@ -78,6 +42,7 @@ function balance(int $number): int
 
         return balance($result);
     }
+    asort($data);
 
     return arrayToInt($data);
 }

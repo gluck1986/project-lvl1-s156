@@ -4,10 +4,11 @@ namespace BrainGames\GamesCore;
 
 use function BrainGames\CliIOFunctions\ask;
 use function BrainGames\CliIOFunctions\askName;
-use function BrainGames\CliIOFunctions\say;
 use function BrainGames\CliIOFunctions\sayCorrect;
+use function BrainGames\CliIOFunctions\sayHead;
 use function BrainGames\CliIOFunctions\sayHello;
 use function BrainGames\CliIOFunctions\sayNotCorrect;
+use function BrainGames\CliIOFunctions\sayQuestion;
 use function BrainGames\CliIOFunctions\sayTryAgain;
 use function BrainGames\CliIOFunctions\sayWelcome;
 use function BrainGames\CliIOFunctions\sayWin;
@@ -19,7 +20,7 @@ const MAX_TRY = 3;
 function initGame(\Closure $scenario): void
 {
     sayWelcome();
-    say(getHead($scenario), 2);
+    sayHead(getHead($scenario));
     $name = askName();
     sayHello($name);
     $result = runGame(getGame($scenario), MAX_TRY);
@@ -36,7 +37,7 @@ function runGame(\Closure $game, int $try): bool
         return true;
     }
     list($question, $expected, $tester) = $game();
-    say('Question: ' . $question);
+    sayQuestion($question);
     $actual = (string)ask('Your answer');
     if ((!is_null($tester) && $tester($actual))
         || (is_null($tester) && $actual === $expected)

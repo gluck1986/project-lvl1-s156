@@ -16,6 +16,16 @@ function ask($question, $default = '0'): string
     return prompt($question, $default);
 }
 
+function sayHead($head)
+{
+    say($head, 2);
+}
+
+function sayQuestion($question)
+{
+    say('Question: ' . $question);
+}
+
 /**
  * Ask user name
  *
