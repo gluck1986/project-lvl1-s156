@@ -2,10 +2,10 @@
 
 namespace BrainGames\tests;
 
-use function BrainGames\Halpers\calcGCD;
-use function BrainGames\Halpers\isPrime;
+use function BrainGames\Helpers\calcGCD;
+use function BrainGames\Helpers\isPrime;
 
-class HalpersTest extends \PHPUnit\Framework\TestCase
+class HelpersTest extends \PHPUnit\Framework\TestCase
 {
 
     public function getGcdData()

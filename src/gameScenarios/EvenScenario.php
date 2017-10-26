@@ -10,6 +10,11 @@ const NO = 'no';
 const MIN_NUM = 1;
 const MAX_NUM = 99;
 
+function run()
+{
+    \BrainGames\Cli\run(getScenario());
+}
+
 function getScenario()
 {
     return buildScenario(getHead(), getAction());

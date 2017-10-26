@@ -8,6 +8,11 @@ use function BrainGames\Scenario\buildScenario;
 const MIN_NUM = 1;
 const MAX_NUM = 20;
 
+function run()
+{
+    \BrainGames\Cli\run(getScenario());
+}
+
 function getScenario()
 {
     return buildScenario(getHead(), getAction());

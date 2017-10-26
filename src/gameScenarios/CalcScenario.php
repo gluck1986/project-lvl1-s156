@@ -10,6 +10,11 @@ const MAX_NUM = 10;
 const KEY_OPERATION = 'operation';
 const KEY_OPERATION_NAME = 'name';
 
+function run()
+{
+    \BrainGames\Cli\run(getScenario());
+}
+
 function getScenario()
 {
     return buildScenario(getHead(), getAction());

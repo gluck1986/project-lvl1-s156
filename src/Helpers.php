@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\Halpers;
+namespace BrainGames\Helpers;
 
 const FERMA_MAX_TRY = 50;
 
@@ -19,7 +19,7 @@ function isPrime(float $number, int $try = 0): bool
     if ($try > FERMA_MAX_TRY) {
         return true;
     }
-    if ($number === (float)2) {
+    if ($number === 2 || $number === 1) {
         return true;
     }
     $a = mt_rand(1, $number - 1);

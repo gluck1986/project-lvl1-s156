@@ -32,7 +32,7 @@
       "src\\CliIOFunctions.php",
       "src\\Scenario.php",
       "src\\GamesCore.php",
-      "src\\Halpers.php",
+      "src\\Helpers.php",
       "src\\gameScenarios\\EvenScenario.php",
       "src\\gameScenarios\\CalcScenario.php",
       "src\\gameScenarios\\GcdScenario.php",

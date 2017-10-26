@@ -3,4 +3,4 @@
 <?php
 require_once __DIR__ . '/../src/bootstrap.php';
 
-\BrainGames\Cli\run(\BrainGames\gameScenarios\ProgressionScenario\getScenario());
+\BrainGames\gameScenarios\ProgressionScenario\run();

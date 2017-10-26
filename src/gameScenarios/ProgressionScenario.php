@@ -10,6 +10,11 @@ const SEQUENCE_STEP_MIN = 1;
 const SEQUENCE_STEP_MAX = 4;
 const SEQUENCE_LENGTH = 7;
 
+function run()
+{
+    \BrainGames\Cli\run(getScenario());
+}
+
 function getScenario()
 {
     return buildScenario(getHead(), getAction());

@@ -11,6 +11,11 @@ const MAX_NUM = 14;
 const YES = 'yes';
 const NO = 'no';
 
+function run()
+{
+    \BrainGames\Cli\run(getScenario());
+}
+
 function getScenario()
 {
     return buildScenario(getHead(), getAction());
