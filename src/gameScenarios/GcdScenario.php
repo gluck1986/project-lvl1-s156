@@ -2,9 +2,8 @@
 
 namespace BrainGames\gameScenarios\GcdScenario;
 
+use function BrainGames\Halpers\calcGCD;
 use function BrainGames\Scenario\buildScenario;
-
-const ID = 'gcd';
 
 const MIN_NUM = 1;
 const MAX_NUM = 20;
@@ -32,12 +31,3 @@ function getAction(): \Closure
     };
 }
 
-function calcGCD($fval, $sval): int
-{
-    list($lower, $highest) = ($fval > $sval ? [$sval, $fval] : [$fval, $sval]);
-    if (($remainder = ($highest % $lower)) === 0) {
-        return $lower;
-    }
-
-    return calcGCD($remainder, $lower);
-}
