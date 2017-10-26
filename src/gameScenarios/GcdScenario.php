@@ -2,7 +2,7 @@
 
 namespace BrainGames\gameScenarios\GcdScenario;
 
-use function BrainGames\Halpers\calcGCD;
+use function BrainGames\Helpers\calcGCD;
 use function BrainGames\Scenario\buildScenario;
 
 const MIN_NUM = 1;

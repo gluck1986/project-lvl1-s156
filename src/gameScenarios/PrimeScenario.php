@@ -2,7 +2,7 @@
 
 namespace BrainGames\gameScenarios\PrimeScenario;
 
-use function BrainGames\Halpers\isPrime;
+use function BrainGames\Helpers\isPrime;
 use function BrainGames\Scenario\buildScenario;
 
 const MIN_NUM = 1;
